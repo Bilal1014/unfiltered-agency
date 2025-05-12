@@ -1,109 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Unfiltered Knowledge Agency</title>
   <style>
     body {
+      background-color: #0d0d0d;
+      color: #ffffff;
       font-family: Arial, sans-serif;
-      background-color: #0e0e0e;
-      color: #f0f0f0;
       margin: 0;
       padding: 0;
     }
-    header {
-      background-color: #1b1b1b;
-      padding: 2rem;
+    header, footer {
       text-align: center;
+      padding: 2rem;
+      background-color: #111;
     }
     h1 {
-      margin: 0;
       font-size: 2.5rem;
     }
-    section {
+    .section {
       padding: 2rem;
+      max-width: 800px;
+      margin: auto;
     }
-    .offer {
-      background: #1e1e1e;
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      border-left: 5px solid #00ffc3;
-    }
-    .cta, .form-section {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .cta a {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background-color: #00ffc3;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-    }
-    .form-section form {
-      max-width: 500px;
-      margin: 0 auto;
-      background: #1b1b1b;
-      padding: 2rem;
-      border-radius: 8px;
-    }
-    .form-section input, .form-section select, .form-section textarea {
-      width: 100%;
-      padding: 0.75rem;
+    .form-group {
       margin-bottom: 1rem;
-      background: #0e0e0e;
-      border: 1px solid #333;
-      color: #f0f0f0;
-      border-radius: 4px;
     }
-    .form-section button {
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+    }
+    button {
       background-color: #00ffc3;
       color: #000;
-      padding: 0.75rem 2rem;
-      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
       font-weight: bold;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
-      border-radius: 4px;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Unfiltered Knowledge Agency</h1>
-    <p>Beyond science. Beyond limits. For those who dare to ask.</p>
+    <h1>UNFILTERED KNOWLEDGE AGENCY</h1>
+    <p>Beyond what you're allowed to know.</p>
   </header>
-  <section>
-    <div class="offer">
-      <h2>1. Black Archive Synthesis</h2>
-      <p>We scan unindexed, declassified, and suppressed scientific documents. You get a distilled, actionable briefing.</p>
-    </div>
-    <div class="offer">
-      <h2>2. Sandbox Simulation</h2>
-      <p>Custom AI-built simulations of alternate physics, historical anomalies, or undisclosed propulsion concepts.</p>
-    </div>
-    <div class="offer">
-      <h2>3. Deep-Tech Due Diligence</h2>
-      <p>We investigate claims, patents, or inventions using layered data from fringe to academic — and give a trust score.</p>
-    </div>
+
+  <section class="section">
+    <h2>Our Services</h2>
+    <ul>
+      <li>🧠 Black Archive Dossier: Fringe science, suppressed tech, declassified intel</li>
+      <li>📊 Strategic Due Diligence: Audit of people, ideas, or companies from the shadows</li>
+      <li>🔮 Sandbox Simulations: Explore alternate physics, realities, or outcomes</li>
+    </ul>
   </section>
 
-  <section class="form-section">
+  <section class="section">
     <h2>Submit a Query</h2>
     <form action="https://formsubmit.co/bilaal811@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <select name="service" required>
-        <option value="">Select a Service</option>
-        <option value="black_archive">Black Archive Synthesis</option>
-        <option value="sandbox">Sandbox Simulation</option>
-        <option value="due_diligence">Deep-Tech Due Diligence</option>
-      </select>
-      <textarea name="query" placeholder="Describe your topic, question, or link here..." rows="5" required></textarea>
-      <button type="submit">Submit Request</button>
+      <input type="hidden" name="_next" value="https://unfiltered-agency.vercel.app/thankyou.html">
+      
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="type">Type of Request</label>
+        <select name="type" required>
+          <option value="Black Archive">Black Archive</option>
+          <option value="Strategic Due Diligence">Strategic Due Diligence</option>
+          <option value="Sandbox Simulation">Sandbox Simulation</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="query">Your Question or Theory</label>
+        <textarea name="query" rows="6" required></textarea>
+      </div>
+
+      <button type="submit">Submit Query</button>
     </form>
   </section>
+
+  <footer>
+    <p>© 2025 Unfiltered Knowledge Agency — All Rights Bypassed</p>
+  </footer>
 </body>
 </html>
